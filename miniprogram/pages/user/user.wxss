@@ -1,0 +1,58 @@
+/* pages/user/user.wxss */
+.user-info{
+  height: 150rpx;
+  background-color: #1a1b1d;
+  color: white;
+  border-top: 2rpx #e8d88d solid;  
+  padding: 0 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.user-info image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 15rpx;
+  margin-right: 25rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  
+}
+
+.user-info button{
+ 
+}
+.user-list{
+  border-top: 5rpx #e8d88d solid;
+}
+
+.user-list-item{
+  height: 50rpx;
+  border-bottom: 1rpx #cdcdcd solid;
+  padding: 10rpx;
+  display: flex;
+}
+
+.user-list-item .iconshouhuodizhi,.iconyuyuedingdan,.iconyouhuiquan{
+  font-size: 20px;
+  margin-left: 10rpx; 
+  margin-right: 20rpx;
+}
+
+.user-list-item .iconshouhuodizhi{
+  color: cornflowerblue;  
+  
+}
+
+.user-list-item .iconyuyuedingdan{
+  color: coral;
+}
+
+.user-list-item .iconyouhuiquan{
+  color: darkseagreen ;
+}
+
+.user-list-item .iconxianxingtubiaozhizuomoban-09{
+  margin-top: 5rpx;
+  margin-left: auto;
+}

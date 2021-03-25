@@ -1,0 +1,126 @@
+<!--pages/serviceAppointment/serviceAppointment.wxml-->
+<view class="appointment">
+  <view class="information">
+    <view class="title">
+      <text>预定信息</text>
+    </view>
+    <view class="number">
+      <text>选择人数</text>
+
+      <view class="detail">
+        <picker bindchange="bindNumberChange" value="{{numberIndex}}" range="{{number}}">
+          <view class="picker">
+            {{number[numberIndex]}}
+          </view>
+        </picker>
+
+        <text class="iconfont iconxianxingtubiaozhizuomoban-09"></text>
+      </view>
+    </view>
+
+
+    <view class="date">
+      
+      <text>选择时间</text>
+      
+      <view class="detail">
+        <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+          <view class="tui-picker-detail">
+            {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}
+          </view>
+        </picker>
+        <text class="iconfont iconxianxingtubiaozhizuomoban-09"></text>
+      </view>
+    </view>
+
+
+    <view class="type">
+      <text>选择桌位类型</text>
+
+      <view class="detail">
+        <picker bindchange="bindTableChange" value="{{tableIndex}}" range="{{tableType}}">
+          <view class="picker">
+            {{tableType[tableIndex]}}
+          </view>
+        </picker>
+
+        <text class="iconfont iconxianxingtubiaozhizuomoban-09"></text>
+      </view>
+    </view>
+
+
+    <view class="contact">
+      <text>联系人</text>
+      <view class="detail">
+        <input placeholder='请输入联系人姓名' type="text" value="{{contactName}}"/>
+        <radio-group bindchange="sexChange" class="radiogroup">
+          <view class="radiobox" wx:for="{{sex}}" wx:key="value">
+            <radio value="{{item.id}}" checked="{{item.checked}}"/>
+            <view class="radiotxt">{{item.value}}</view>
+          </view>
+        </radio-group>
+      </view>
+    </view>
+
+    <view class="phone">
+      <text>联系电话</text>
+      <input placeholder='请输入联系人电话' type="text" value="{{contactPhone}}"/>
+      
+    </view>
+
+
+    
+  </view>
+
+  
+
+  <view class="mode">
+
+    <view class="title">
+      <text>预定模式</text>
+    </view>
+
+    <view class="detail">
+      <radio-group bindchange="modeChange" class="radiogroup">
+        <view class="radiobox {{item.checked==true?'active':''}}" wx:for="{{mode}}" wx:key="value">
+          <view class="radiotxt">{{item.value}}</view>
+          <radio value="{{item.id}}" checked="{{item.checked}}"/>
+          
+        </view>
+      </radio-group>
+    </view>
+    
+
+  </view>
+
+  <view class="order" wx:if="{{orderDish}}">
+    <view class="title">
+      <text>菜品列表</text>
+    </view>
+    <view class="detail"> 
+      <navigator url="../dishOrder/dishOrder" hover-class="navigator-hover" open-type="navigate">
+        <view class="chooseOrder">        
+          <text>前往选择菜品</text>
+          <text class="iconfont iconxianxingtubiaozhizuomoban-09"></text>
+        </view>
+      </navigator>
+      
+      <view class="orderList">
+
+      </view>
+    </view>
+  </view>
+
+
+  <view class="remark">
+    <view class="title">
+      <text>备注</text>
+    </view>
+    <textarea placeholder='请输入备注信息' type="text" value="{{remark}}" bindinput="handleText"/>
+  </view>
+
+  <view class="apply">
+    <button class="btn">立即预定</button>
+  </view>
+
+</view>

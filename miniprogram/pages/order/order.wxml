@@ -1,0 +1,19 @@
+<!--pages/order/order.wxml-->
+<view class="order">
+  <view class="order-tab">
+   
+    <view class="{{current == 'pay'? 'active':''}}" data-current="pay" bindtap="handleCurrent">待付款</view>
+    <view class="{{current == 'deliver'? 'active':''}}" data-current="deliver" bindtap="handleCurrent">待发货</view>
+    <view class="{{current == 'receive'? 'active':''}}" data-current="receive" bindtap="handleCurrent">待收货</view>
+    <view class="{{current == 'complete'? 'active':''}}" data-current="complete" bindtap="handleCurrent">已完成</view>
+    <view class="{{current == 'after'? 'active':''}}" data-current="after" bindtap="handleCurrent">售后</view>
+
+  </view>
+
+  <view class="index-list">
+    <view class="index-list-item" wx:for="{{ orderListData }}" wx:key="index">
+      
+    </view>
+  </view>
+
+</view>

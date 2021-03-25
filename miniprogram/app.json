@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/order",
+    "pages/user/user",
+    "pages/receive/receive",
+    "pages/appointment/appointment",
+    "pages/coupon/coupon",
+    "pages/serviceAppointment/serviceAppointment",
+    "pages/serviceTakeOut/serviceTakeOut",
+    "pages/serviceOrder/serviceOrder",
+    "pages/dishOrder/dishOrder"    
+
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1a1b1d",
+    "navigationBarTitleText": "土宫殿",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#e8d88d",
+    "list": [
+      {
+        "iconPath": "images/tabbar/index.png",
+        "selectedIconPath": "images/tabbar/index-active.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/tabbar/order.png",
+        "selectedIconPath": "images/tabbar/order-active.png",
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      },
+      {
+        "iconPath": "images/tabbar/user.png",
+        "selectedIconPath": "images/tabbar/user-active.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

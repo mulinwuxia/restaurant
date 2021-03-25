@@ -1,0 +1,37 @@
+<!--pages/user/user.wxml-->
+<view class="user">
+  <view class="user-info">
+    <image src="{{userInfo.userPhoto}}"></image>
+    <text wx:if="{{logged}}">{{userInfo.nickName}}</text>
+    <button wx:else disabled="{{disabled}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >微信登录</button>
+   
+  </view>
+  <view wx:if="{{logged}}" class="user-list">
+    <navigator url="../receive/receive" hover-class="navigator-hover" open-type="navigate">
+      <view class="user-list-item">
+        <text class="iconfont iconshouhuodizhi"></text>
+        <text>收货地址</text>
+        <text class="iconfont iconxianxingtubiaozhizuomoban-09 "></text>
+      </view>
+      
+    </navigator>
+    <navigator url="../appointment/appointment" hover-class="navigator-hover" open-type="navigate">
+      <view class="user-list-item">
+        <text class="iconfont iconyuyuedingdan"></text>
+        <text>我的预约</text>
+        <text class="iconfont iconxianxingtubiaozhizuomoban-09 "></text>
+      </view>
+      
+    </navigator>
+
+    <navigator url="../coupon/coupon" hover-class="navigator-hover" open-type="navigate">
+      <view class="user-list-item">
+        <text class="iconfont iconyouhuiquan"></text>
+        <text>我的优惠券</text>
+        <text class="iconfont iconxianxingtubiaozhizuomoban-09 "></text>
+      </view>
+      
+    </navigator>   
+      
+  </view>
+</view>
